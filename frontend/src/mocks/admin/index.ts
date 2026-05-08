@@ -1,9 +1,9 @@
 import type { KnowledgeBaseEntry } from '@widgets/knowledge-base'
 import type { StudyProgramsEntry } from '@widgets/admin-study-programs'
-import type { AdminMenuDTO } from '@pages/Admin/components/AdminNavbar'
 import { defineGet } from '@mocks/msw/define'
 import type { InterviewsEntry } from '@widgets/admin-interviews'
 import type { MswCtx } from '@mocks/msw/createCtx'
+import type { AdminMenuDTO } from '@entities/admin-menu'
 
 const mockMenu: AdminMenuDTO[] = [
   {

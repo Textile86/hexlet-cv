@@ -1,12 +1,12 @@
-import type { TMenuItem } from '@shared/types/inertiaSharedData'
 import { purchaseHandlers } from '@mocks/account/purchase'
 import { progressHandlers, lessonsHandlers } from '@mocks/account/progress'
 import { notificationsHandlers } from '@mocks/account/notifications/index'
 import { defineGet } from '@mocks/msw/define'
 import type { MswCtx } from '@mocks/msw/createCtx'
 import { programsHandlers } from '@mocks/account/programs/index'
+import type { AccountMenuItemDTO } from '@entities/account-menu'
 
-export const menu: TMenuItem[] = [
+export const menu: AccountMenuItemDTO[] = [
   { label: 'Мое обучение', link: '/account/my-progress' },
   { label: 'Покупки и подписки', link: '/account/purchase' },
   { label: 'Вебинары', link: '/account/webinars' },
@@ -43,7 +43,7 @@ const baseProps = (ctx: MswCtx) => ({
   flash: {},
   errors: {},
   auth: { user: ctx.user },
-  menu,
+  account: { menu },
   activityCards,
 })
 

@@ -1,4 +1,4 @@
-import type { TPagination } from '@shared/types'
+import type { Pagination } from '@shared/types/pagination'
 
 export type TProgress = {
   id: number
@@ -14,5 +14,5 @@ export type TProgress = {
 
 export interface IProgressResponse {
   progress: TProgress[]
-  pagination: TPagination
+  pagination: Pagination
 }

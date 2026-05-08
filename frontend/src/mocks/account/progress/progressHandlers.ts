@@ -164,7 +164,7 @@ export const progressHandlers = [
         flash: {},
         errors: {},
         auth: { user: ctx.user },
-        menu,
+        account: { menu },
         activityCards,
         progress: pagedProgress,
         pagination: {
@@ -176,7 +176,7 @@ export const progressHandlers = [
         activeMainSection: 'account',
         activeSubSection: 'my-progress',
       },
-      200
+      200,
     )
   }),
 ]
